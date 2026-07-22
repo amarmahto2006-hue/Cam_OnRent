@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    background-color: #0F172A;
+    color: #F8FAFC;
+  }
+  h1, h2, h3, h4, h5, h6, .font-heading {
+    font-family: 'Poppins', sans-serif;
+  }
+}
+
+/* Immersive UI Palette Colors */
+:root {
+  --bg-deep: #0F172A;
+  --accent-amber: #F59E0B;
+  --accent-blue: #2563EB;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0F172A;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E293B;
+  border-radius: 9999px;
+  border: 2px solid #0F172A;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F59E0B;
+}
+
+/* Glassmorphism Styles (Immersive UI specification) */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.glass-panel {
+  background: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.glass-card:hover {
+  border-color: rgba(245, 158, 11, 0.4);
+  background: rgba(255, 255, 255, 0.07);
+}
+
+/* Immersive Ambient Glows */
+.ambient-blue-glow {
+  background: radial-gradient(circle, rgba(37, 99, 235, 0.22) 0%, rgba(15, 23, 42, 0) 70%);
+  filter: blur(100px);
+}
+
+.ambient-amber-glow {
+  background: radial-gradient(circle, rgba(245, 158, 11, 0.18) 0%, rgba(15, 23, 42, 0) 70%);
+  filter: blur(100px);
+}
+
+/* Background Gradients & Mesh */
+.bg-immersive {
+  background-color: #0F172A;
+  background-image: 
+    radial-gradient(at 20% 20%, rgba(37, 99, 235, 0.15) 0px, transparent 40%),
+    radial-gradient(at 80% 30%, rgba(245, 158, 11, 0.12) 0px, transparent 45%),
+    radial-gradient(at 50% 85%, rgba(37, 99, 235, 0.10) 0px, transparent 50%);
+}
+
+.bg-mesh {
+  background-color: #0F172A;
+  background-image: 
+    radial-gradient(at 10% 10%, rgba(245, 158, 11, 0.12) 0px, transparent 50%),
+    radial-gradient(at 90% 20%, rgba(37, 99, 235, 0.15) 0px, transparent 50%),
+    radial-gradient(at 50% 80%, rgba(245, 158, 11, 0.08) 0px, transparent 50%);
+}
+
+/* Shimmer & Animations */
+@keyframes pulseGlow {
+  0%, 100% { opacity: 0.5; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.08); }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 5s infinite ease-in-out;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-8px) rotate(1deg); }
+}
+
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* Badge styling matching Immersive Theme */
+.immersive-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.85rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #F59E0B;
+}
+
+/* DayPicker Dark Mode Styling Overrides */
+.calendar-custom-wrapper .rdp {
+  --rdp-cell-size: 40px;
+  --rdp-accent-color: #f59e0b;
+  --rdp-background-color: #1e293b;
+  --rdp-outline: 2px solid #f59e0b;
+  margin: 0;
+}
+
+.calendar-custom-wrapper .rdp-caption_label {
+  color: #fbbf24;
+  font-weight: 800;
+  font-size: 1rem;
+}
+
+.calendar-custom-wrapper .rdp-nav_button {
+  color: #cbd5e1;
+  border-radius: 8px;
+}
+
+.calendar-custom-wrapper .rdp-nav_button:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #f59e0b;
+}
+
+.calendar-custom-wrapper .rdp-head_cell {
+  color: #94a3b8;
+  font-weight: 700;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.calendar-custom-wrapper .rdp-day_selected,
+.calendar-custom-wrapper .rdp-day_selected:hover {
+  background-color: #f59e0b !important;
+  color: #020617 !important;
+  font-weight: 800;
+  border-radius: 8px;
+}
+

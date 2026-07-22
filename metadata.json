@@ -1,0 +1,6 @@
+{
+  "name": "CamOnRent - Premium GoPro & Action Camera Rentals",
+  "description": "CamOnRent is Ramgarh's premier camera rental platform offering GoPro Hero 12, Insta360 X3, and DJI Osmo Action 4 with instant WhatsApp booking, 12-point QC equipment, and same-day delivery.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
