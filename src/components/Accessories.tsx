@@ -68,6 +68,8 @@ export const Accessories: React.FC = () => {
                     <img
                       src={acc.image}
                       alt={acc.name}
+                      loading="lazy"
+                      decodings="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     />
                   </div>

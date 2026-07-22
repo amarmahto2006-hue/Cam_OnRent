@@ -36,8 +36,7 @@ const SectionSkeleton: React.FC = () => (
 );
 
 export default function App() {
-  const [isAppReady, setIsAppReady] = useState(false);
-  const [loadingProgress, setLoadingProgress] = useState(25);
+  const [isAppReady, setIsAppReady] = useState(true);
 
   // Google Sheets Modal state
   const [isSheetsModalOpen, setIsSheetsModalOpen] = useState(false);
@@ -51,36 +50,17 @@ export default function App() {
   };
 
   useEffect(() => {
-    // Preload critical assets (Logo Emblem & High-Res Hero 3D Model Image)
+    // Non-blocking background image preloading for smooth performance
     const criticalAssets = [
       'https://i.ibb.co/N2s4J5FT/01-Brand-Logo-Cam-On-Rent-Emblem.png',
       'https://i.ibb.co/xqMmZv5s/02-Hero-3-D-Model-Go-Pro-HERO12.png',
       'https://i.ibb.co/dsx52DCW/03-Product-Go-Pro-HERO12-Black-Flagship.png'
     ];
 
-    let loaded = 0;
-    const updateProgress = () => {
-      loaded += 1;
-      const calculated = Math.min(95, 30 + Math.round((loaded / criticalAssets.length) * 65));
-      setLoadingProgress(calculated);
-    };
-
     criticalAssets.forEach((src) => {
       const img = new Image();
       img.src = src;
-      img.onload = updateProgress;
-      img.onerror = updateProgress;
     });
-
-    // Ensure initial load completes well within the 3-second budget (1.2s optimal reveal)
-    const timer = setTimeout(() => {
-      setLoadingProgress(100);
-      setTimeout(() => {
-        setIsAppReady(true);
-      }, 200);
-    }, 1100);
-
-    return () => clearTimeout(timer);
   }, []);
 
   const scrollToContact = () => {
@@ -90,16 +70,8 @@ export default function App() {
 
   return (
     <>
-      {/* Skeleton Loading Screen with CamOnRent Logo */}
-      {!isAppReady && (
-        <LoadingSkeleton
-          progress={loadingProgress}
-          message="Loading 3D DRACO Geometry & CamOnRent Media..."
-        />
-      )}
-
-      {/* Main Application Shell revealed once assets & Suspense initialized */}
-      <div className={`min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-amber-500 selection:text-slate-950 relative transition-opacity duration-500 ${isAppReady ? 'opacity-100' : 'opacity-0'}`}>
+      {/* Main Application Shell revealed immediately for instant performance */}
+      <div className="min-h-screen bg-slate-950 text-slate-100 font-sans selection:bg-amber-500 selection:text-slate-950 relative">
         <AnnouncementBar />
         <Navbar onOpenBookingModal={scrollToContact} onOpenSheetsModal={() => handleOpenSheetsModal()} />
 

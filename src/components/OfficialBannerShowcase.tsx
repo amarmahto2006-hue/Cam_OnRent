@@ -54,6 +54,8 @@ export const OfficialBannerShowcase: React.FC = () => {
                   <img
                     src="https://i.ibb.co/xqMmZv5s/02-Hero-3-D-Model-Go-Pro-HERO12.png"
                     alt="GoPro HERO 12 Black Official Model"
+                    loading="lazy"
+                    decodings="async"
                     className="w-full h-full object-contain drop-shadow-[0_10px_20px_rgba(245,158,11,0.4)]"
                   />
                 </div>

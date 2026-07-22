@@ -67,10 +67,12 @@ export const ThreeCameraHero: React.FC<ThreeCameraHeroProps> = ({ onAngleChange 
     camera.position.set(0, 0, 7.5);
     cameraRef.current = camera;
 
-    // 3. Renderer
-    const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'default' });
+    // 3. Renderer - Optimized pixel ratio for low-end GPUs
+    const isMobile = window.innerWidth < 768;
+    const maxPixelRatio = isMobile ? 1 : Math.min(window.devicePixelRatio, 1.25);
+    const renderer = new THREE.WebGLRenderer({ antialias: !isMobile, alpha: true, powerPreference: 'low-power' });
     renderer.setSize(width, height);
-    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    renderer.setPixelRatio(maxPixelRatio);
     renderer.shadowMap.enabled = false;
     renderer.toneMapping = THREE.LinearToneMapping;
     rendererRef.current = renderer;
@@ -454,11 +456,29 @@ export const ThreeCameraHero: React.FC<ThreeCameraHeroProps> = ({ onAngleChange 
     window.addEventListener('touchmove', handleTouchMove, { passive: true });
     window.addEventListener('touchend', handleTouchEnd);
 
-    // 7. Animation Loop
+    // 7. Animation Loop with IntersectionObserver pausing for 100% GPU relief when offscreen
     let animationFrameId: number;
     let clock = new THREE.Clock();
+    let isCanvasVisible = true;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          isCanvasVisible = entry.isIntersecting;
+          if (isCanvasVisible && !animationFrameId) {
+            animate();
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
+    observer.observe(container);
 
     const animate = () => {
+      if (!isCanvasVisible) {
+        animationFrameId = 0;
+        return;
+      }
       animationFrameId = requestAnimationFrame(animate);
 
       const elapsedTime = clock.getElapsedTime();
@@ -528,6 +548,7 @@ export const ThreeCameraHero: React.FC<ThreeCameraHeroProps> = ({ onAngleChange 
     window.addEventListener('resize', handleResize);
 
     return () => {
+      observer.disconnect();
       cancelAnimationFrame(animationFrameId);
       container.removeEventListener('mousedown', handleMouseDown);
       window.removeEventListener('mousemove', handleMouseMove);

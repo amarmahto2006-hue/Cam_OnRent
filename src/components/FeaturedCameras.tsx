@@ -119,6 +119,8 @@ export const FeaturedCameras: React.FC = () => {
                     <img
                       src={camera.image}
                       alt={camera.name}
+                      loading="lazy"
+                      decodings="async"
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
 

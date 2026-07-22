@@ -13,7 +13,7 @@ export const GoProShowcase: React.FC = () => {
       subtitle: 'Best-in-class 5.3K60 + 4K120 resolution',
       icon: <Video className="w-5 h-5" />,
       desc: 'Capture 91% more resolution than 4K. High Dynamic Range (HDR) video brings out unbelievable shadow & highlight detail in Jharkhand landscapes.',
-      image: 'https://i.ibb.co/dsx52DCW/03-Product-Go-Pro-HERO12-Black-Flagship.png',
+      image: 'https://images.unsplash.com/photo-1565849904461-04a58ad377e0?auto=format&fit=crop&w=700&q=75',
       specs: '5.3K60, 4K120, 2.7K240 | 8-Bit / 10-Bit Log Color',
     },
     {
@@ -22,7 +22,7 @@ export const GoProShowcase: React.FC = () => {
       subtitle: 'Emmy® Award-Winning Stabilization',
       icon: <Cpu className="w-5 h-5" />,
       desc: 'Smooth out the roughest motorcycle rides and offroad mountain trails. AutoBoost automatically adjusts stabilization based on speed and movement.',
-      image: 'https://i.ibb.co/SXRxT5Fg/04-Accessory-Curved-Helmet-Mount-JHook.png',
+      image: 'https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&w=700&q=75',
       specs: 'AutoBoost + 360° Horizon Lock (Tilt-proof)',
     },
     {
@@ -31,7 +31,7 @@ export const GoProShowcase: React.FC = () => {
       subtitle: 'Ruggedized for Extreme Water Action',
       icon: <Waves className="w-5 h-5" />,
       desc: 'Built tough and waterproof down to 33ft (10m) right out of the box. Includes water-repelling lens cover that eliminates lens flare and water drops.',
-      image: 'https://i.ibb.co/xKJy89Cc/12-Gallery-Rajrappa-Waterfall-Sunset.png',
+      image: 'https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=700&q=75',
       specs: 'Waterproof 10m (33ft) | Hydrophobic Glass Cover',
     },
     {
@@ -40,7 +40,7 @@ export const GoProShowcase: React.FC = () => {
       subtitle: 'Extended Cold-Weather Run Time',
       icon: <Battery className="w-5 h-5" />,
       desc: 'Includes 2x high-performance Enduro batteries offering up to 2x longer recording time compared to standard batteries.',
-      image: 'https://i.ibb.co/sdhww4Vh/08-Accessory-Enduro-Battery-Dual-Charger.png',
+      image: 'https://images.unsplash.com/photo-1619725002198-6a689b72f41d?auto=format&fit=crop&w=700&q=75',
       specs: '70 mins continuous @ 5.3K60 | 1.5 hrs @ 4K30',
     },
     {
@@ -49,7 +49,7 @@ export const GoProShowcase: React.FC = () => {
       subtitle: '240 Frames Per Second Precision',
       icon: <Sparkles className="w-5 h-5" />,
       desc: 'Slow down the action up to 4x in high resolution 2.7K or 8x slow motion in 1080p. Relive every jump, splash, and stunt.',
-      image: 'https://i.ibb.co/nJZtvjB/13-Gallery-Hazaribagh-Offroad-Trail.png',
+      image: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=700&q=75',
       specs: '2.7K @ 240fps | 1080p @ 240fps',
     },
     {
@@ -58,7 +58,7 @@ export const GoProShowcase: React.FC = () => {
       subtitle: 'Wireless Helmet Mic & AirPod Sync',
       icon: <Mic className="w-5 h-5" />,
       desc: 'Connect your Sena, Cardo motorcycle helmet intercom or AirPods wirelessly to record crisp voice logs while riding at high speeds.',
-      image: 'https://i.ibb.co/gLmGPBpc/16-Gallery-Rajrappa-Temple-Vlogging-POV.png',
+      image: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=700&q=75',
       specs: 'Dual Bluetooth Audio Streams + Voice Control',
     },
   ];
@@ -149,6 +149,8 @@ export const GoProShowcase: React.FC = () => {
             <img
               src={currentTab.image}
               alt={currentTab.title}
+              loading="lazy"
+              decodings="async"
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
             />
             <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />

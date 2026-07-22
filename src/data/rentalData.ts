@@ -112,7 +112,7 @@ export const REVIEWS: ReviewItem[] = [
     name: 'Aman Sharma',
     role: 'Moto Vlogger (120k subs)',
     location: 'Ramgarh Cantt',
-    avatar: 'https://i.ibb.co/vv3y1Qc8/17-Avatar-Aman-Sharma-Moto-Vlogger.png',
+    avatar: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=150&h=150&q=75',
     rating: 5,
     quote: 'Rented the GoPro HERO 12 Black with helmet mount for my Patratu Valley ride. The camera was super clean, batteries were 100% charged, and WhatsApp booking took less than 3 minutes!',
     verifiedRental: 'Verified GoPro HERO 12 Rental',
@@ -123,7 +123,7 @@ export const REVIEWS: ReviewItem[] = [
     name: 'Rahul Verma',
     role: 'Travel Content Creator',
     location: 'Ranchi',
-    avatar: 'https://i.ibb.co/hxg8HC1N/18-Avatar-Rahul-Verma-Travel-Creator.png',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=150&h=150&q=75',
     rating: 5,
     quote: 'The GoPro HERO 12 Black with 3-Way tripod stick changed my travel reels game at Netarhat! HyperSmooth 6.0 video is unbelievably smooth. Got my security deposit refunded via UPI immediately upon returning.',
     verifiedRental: 'Verified GoPro HERO 12 Rental',
@@ -134,7 +134,7 @@ export const REVIEWS: ReviewItem[] = [
     name: 'Saniya & Crew',
     role: 'College Short Film Director',
     location: 'Ramgarh',
-    avatar: 'https://i.ibb.co/d0Dg5yCV/19-Avatar-Saniya-and-Crew-Film-Director.png',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=150&h=150&q=75',
     rating: 5,
     quote: 'We rented the GoPro HERO 12 Black for our college short film project in Ramgarh. 5.3K60 resolution gave cinema-grade quality. Affordable daily rates and zero hidden charges!',
     verifiedRental: 'Verified GoPro HERO 12 Rental',
@@ -189,7 +189,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Patratu, Ramgarh',
     camera: 'GoPro HERO 12 Black',
     category: 'motovlog',
-    imageUrl: 'https://i.ibb.co/rK9mTxcV/11-Gallery-Patratu-Valley-Hairpin-Bends.png',
+    imageUrl: 'https://images.unsplash.com/photo-1568772585407-9361f9bf3a87?auto=format&fit=crop&w=600&q=70',
   },
   {
     id: 'gal-2',
@@ -198,7 +198,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Rajrappa, Ramgarh',
     camera: 'GoPro HERO 12 Black',
     category: 'vlog',
-    imageUrl: 'https://i.ibb.co/xKJy89Cc/12-Gallery-Rajrappa-Waterfall-Sunset.png',
+    imageUrl: 'https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?auto=format&fit=crop&w=600&q=70',
   },
   {
     id: 'gal-3',
@@ -207,7 +207,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Hazaribagh Hills',
     camera: 'GoPro HERO 12 Black',
     category: 'adventure',
-    imageUrl: 'https://i.ibb.co/nJZtvjB/13-Gallery-Hazaribagh-Offroad-Trail.png',
+    imageUrl: 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?auto=format&fit=crop&w=600&q=70',
   },
   {
     id: 'gal-4',
@@ -216,7 +216,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Ramgarh Club House',
     camera: 'GoPro HERO 12 Black',
     category: 'wedding',
-    imageUrl: 'https://i.ibb.co/Zpx7Zpgc/14-Gallery-Ramgarh-Wedding-Event-Angle.png',
+    imageUrl: 'https://images.unsplash.com/photo-1519741497674-611481863552?auto=format&fit=crop&w=600&q=70',
   },
   {
     id: 'gal-5',
@@ -225,7 +225,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Netarhat Plateau',
     camera: 'GoPro HERO 12 Black',
     category: 'travel',
-    imageUrl: 'https://i.ibb.co/rRc88WxC/15-Gallery-Netarhat-Sunrise-Time-Lapse.png',
+    imageUrl: 'https://images.unsplash.com/photo-1470240731273-7821a6eeb6bd?auto=format&fit=crop&w=600&q=70',
   },
   {
     id: 'gal-6',
@@ -234,7 +234,7 @@ export const GALLERY_ITEMS: GalleryItem[] = [
     location: 'Rajrappa Temple',
     camera: 'GoPro HERO 12 Black',
     category: 'vlog',
-    imageUrl: 'https://i.ibb.co/gLmGPBpc/16-Gallery-Rajrappa-Temple-Vlogging-POV.png',
+    imageUrl: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&w=600&q=70',
   },
 ];
 
